@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3498db" />
+            <stop offset="100%" stop-color="#2c3e50" />
+        </linearGradient>
+        <style type="text/css">
+            @font-face {
+                font-family: 'FontAwesome';
+                src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2') format('woff2');
+            }
+            .text {
+                font-family: 'FontAwesome', sans-serif;
+                font-size: 100px;
+                fill: white;
+                opacity: 0.9;
+            }
+        </style>
+    </defs>
+    <circle cx="150" cy="150" r="150" fill="url(#bgGradient)" />
+    <text x="150" y="180" text-anchor="middle" class="text"><i class="fas fa-user"></i>👤</text>
+    <text x="150" y="240" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">点击更换照片</text>
+</svg>
