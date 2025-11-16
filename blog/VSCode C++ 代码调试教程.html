@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSCode C++ 代码调试教程</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 20px;
+            border-bottom: none;
+            margin-top: 25px;
+        }
+        .img-box {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .note {
+            background: #fff8e1;
+            padding: 12px 16px;
+            border-left: 4px solid #ffb74d;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        a {
+            color: #2196f3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .step {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Consolas", monospace;
+            color: #e74c3c;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>VSCode C++ 代码调试教程</h1>
+
+    <h2>一、简介</h2>
+    <p>随着大家学习的深入，大家需要进行调试代码。因此本文的目的是为了在上一篇文章<a href="https://blog.csdn.net/m0_58575732/article/details/151894951?spm=1001.2014.3001.5501" target="_blank">《配置vscode的cpp环境》</a>的基础上，教大家如何进行代码调试。</p>
+
+    <h2>二、配置环境变量</h2>
+    <p>在原有配置文件的基础上，我们只需要将<code>MingW64</code>文件夹下的<code>bin</code>文件夹添加到环境变量中即可。演示如下图所示。</p>
+
+    <h3>step1 复制路径</h3>
+    <p>找到电脑中存放<code>MingW64</code>文件夹下的<code>bin</code>文件夹，打开后如下图所示。</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/7a6d0ffff1fb4dadac565e5c06142f26.png" alt="bin文件夹目录">
+        <p>bin文件夹目录</p>
+    </div>
+    <p>接着鼠标单击箭头所指的空白区域。</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/54c30852cd13483c832beb624d1e9a6f.png" alt="点击空白区域">
+        <p>点击路径栏空白区域</p>
+    </div>
+    <p>然后复制这个路径。</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/9e169e3571dd4ec8a24e5e1961e6ae8e.png" alt="复制路径">
+        <p>复制bin文件夹路径</p>
+    </div>
+
+    <h3>step2 设置系统环境变量</h3>
+    <p>找到<code>桌面</code>的<code>此电脑</code>，鼠标右击，选择属性。如果桌面没有此电脑的可以进行百度如何调出这个图标，相信计算机类相关专业的同学解决这个问题还是很简单的。当然也有其他打开设置环境变量的方法，我就不一一列举了，交给大家自己探索咯。</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/6f53ee782ef343368c8bf5d7ab7934f7.png" alt="右键此电脑选择属性">
+        <p>右键此电脑选择属性</p>
+    </div>
+    <p>在弹出的界面点击<strong>高级系统设置</strong></p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/5b12787dc04e46e6b19ea6e99d58c27a.png" alt="点击高级系统设置">
+        <p>系统属性界面</p>
+    </div>
+    <p>然后点击<strong>环境变量</strong>。</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/04c57500fca343d898f5ea3f2de9055d.png" alt="点击环境变量">
+        <p>环境变量入口</p>
+    </div>
+    <p>接下来在<strong>系统变量</strong>下选择<strong>Path</strong>，然后选择<strong>编辑</strong></p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/48fee14180c94c2ebe781e1a1a5d45f8.png" alt="编辑Path变量">
+        <p>编辑系统Path变量</p>
+    </div>
+    <p>在弹出的界面选择<strong>新建</strong>，然后<strong>粘贴刚才复制的路径</strong>，最后点击<strong>确定</strong>。</p>
+    <div class="note">
+        <p>PS: 大家忽略我电脑上这么多的环境变量，因为装的软件实在太多了。</p>
+    </div>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/aa9aabe3d9df4d13914f4809309e3cda.png" alt="添加路径并确定">
+        <p>添加bin路径到环境变量</p>
+    </div>
+    <p><strong>然后一路点击确定即可</strong>。</p>
+
+    <h2>三、验证环境变量是否配置成功</h2>
+    <p>选择键盘上的<code>Win + R</code></p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/ab12527aa41f40c29f062b8bd76d2460.png" alt="Win+R快捷键">
+        <p>按下Win+R调出运行窗口</p>
+    </div>
+    <p>在这个界面上输入<code>cmd</code></p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/cba91f2cf26a44ada0877dfd316b6f27.png" alt="输入cmd">
+        <p>运行窗口输入cmd</p>
+    </div>
+    <p>点击确定后弹出终端，在终端中输入<code>gcc -v</code>，注意中间的空格</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/6ad8f6cf605d43c08475fe2e2ec174e5.png" alt="终端输入gcc -v">
+        <p>终端执行gcc -v命令</p>
+    </div>
+    <p>回车之后会有如下输出，如果输出正常未报错，说明环境变量配置成功。</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/3daab6b35ad84498b48e25c5a93b9c28.png" alt="配置成功输出">
+        <p>环境变量配置成功的输出结果</p>
+    </div>
+
+    <h2>四、在vscode中进行调试</h2>
+    <p>打开vscode，在代码中设置断点</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/8d6b2fe75ad44157afb6e13205fe39d5.png" alt="设置断点">
+        <p>在代码行左侧点击设置断点</p>
+    </div>
+    <p>选择侧边栏的这个按钮</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/900731d701254a3893f74ef3fd2226cb.png" alt="调试侧边栏">
+        <p>VSCode调试功能入口</p>
+    </div>
+    <p>然后即可开始调试。</p>
+    <div class="img-box">
+        <img src="https://i-blog.csdnimg.cn/direct/a5271c16c9f641f8a1c57af11ff03218.png" alt="开始调试">
+        <p>启动调试过程</p>
+    </div>
+
+    <p>至此，如何在vscode中如何调试代码便教给大家了，如果觉得有用可以给博主点点赞。</p>
+
+    <footer>
+        <p>原文CSDN链接：<a href="https://blog.csdn.net/m0_58575732/article/details/151894951?spm=1001.2014.3001.5501" target="_blank">[环境配置]vscode对cpp进行debug</a></p>
+        <p>原文知乎链接：<a href="https://zhuanlan.zhihu.com/p/1971666893719971370" target="_blank">[环境配置]vscode对cpp进行debug</a></p>
+        <p>© LQ 技术博客 | 保留所有权利</p>
+    </footer>
+</body>
+</html>

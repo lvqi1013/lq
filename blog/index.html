@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 吕麒</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eaeaea;
+        }
+        .blog-header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .blog-meta {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .blog-post {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .post-date {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .post-title {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .post-title:hover {
+            color: #3498db;
+        }
+        .post-excerpt {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .post-category {
+            display: inline-block;
+            background: #ecf0f1;
+            color: #7f8c8d;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .back-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-home-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .back-home-btn:hover {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" style="padding: 20px 0;">
+        <div class="container header-content">
+            <div class="blog-header">
+                <h1>技术博客</h1>
+                <div class="blog-meta">
+                    <i class="fas fa-feather-alt"></i> 记录学习心得，分享技术见解
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="blog-container">
+            <div class="blog-posts">
+                <!-- 博客文章1 -->
+                <article class="blog-post">
+                    <span class="post-date">2024-04-15</span>
+                    <a href="PyTorch安装配置指南.html" class="post-title">PyTorch安装配置指南</a>
+                    <p class="post-excerpt">详细介绍PyTorch的安装步骤、环境配置以及常见问题解决方法，帮助开发者快速搭建PyTorch开发环境。本文涵盖了Windows、macOS和Linux系统的安装教程...<p>
+                    <span class="post-category">深度学习</span>
+                </article>
+
+                <!-- 博客文章2 -->
+                <article class="blog-post">
+                    <span class="post-date">2024-04-10</span>
+                    <a href="VSCode C++ 代码调试教程.html" class="post-title">VSCode C++ 代码调试教程</a>
+                    <p class="post-excerpt">本文详细讲解了如何使用VSCode进行C++代码的调试，包括环境配置、断点设置、变量观察、调用栈分析等技巧，帮助开发者提高调试效率...<p>
+                    <span class="post-category">C++开发</span>
+                </article>
+            </div>
+
+            <div class="back-home">
+                <a href="../index.html" class="back-home-btn">
+                    <i class="fas fa-home"></i> 返回个人主页
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2024 吕麒 - 人工智能专业学生博客</p>
+                    <p>设计与开发：吕麒 | 更新时间：2024年4月</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link" target="_blank"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-link" target="_blank"><i class="fab fa-weibo"></i></a>
+                    <a href="https://blog.csdn.net/m0_58575732?spm=1000.2115.3001.10640" class="social-link" title="CSDN" target="_blank"><i class="fas fa-code"></i></a>
+                    <a href="https://www.zhihu.com/people/liu-xian-ba-ba" class="social-link" title="知乎" target="_blank"><i class="fas fa-question-circle"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

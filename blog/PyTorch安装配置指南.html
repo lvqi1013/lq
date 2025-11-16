@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyTorch安装配置指南（Python3.12 + CUDA 12.8 + torch2.8.0）</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* 标题样式 */
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            text-align: center;
+            margin: 30px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #3498db;
+            margin: 40px 0 20px;
+            padding-left: 10px;
+            border-left: 5px solid #3498db;
+        }
+        
+        h3 {
+            font-size: 20px;
+            color: #e67e22;
+            margin: 30px 0 15px;
+        }
+        
+        /* 段落和列表样式 */
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        /* 代码块样式 */
+        .code-block {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: "Consolas", "Monaco", monospace;
+            overflow-x: auto;
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: "代码块";
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 12px;
+            color: #95a5a6;
+        }
+        
+        /* 图片容器样式 */
+        .img-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        
+        .img-container p {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        /* 注意事项样式 */
+        .note {
+            background-color: #fff3e0;
+            border-left: 5px solid #e67e22;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .note strong {
+            color: #e67e22;
+        }
+        
+        /* 步骤样式 */
+        .step {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        /* 下载链接样式 */
+        .download-link {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .download-link:hover {
+            background-color: #27ae60;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+        }
+        
+        /* 声明样式 */
+        .declaration {
+            background-color: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            font-weight: bold;
+            color: #1976d2;
+        }
+        
+        /* 进度提示样式 */
+        .progress {
+            background-color: #f1f8e9;
+            border-left: 5px solid #66bb6a;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>PyTorch安装配置指南</h1>
+    
+    <div class="declaration">
+        声明：本文后续所示例安装配置为Python3.12, CUDA 12.8的V2.8.0的torch
+    </div>
+    
+    <h2>一、确保自己电脑的cuda版本</h2>
+    <p>确定自己的电脑存在NVIDIA的GPU，如果不存在则无法进行安装配置。</p>
+    
+    <div class="step">
+        <div class="step-title">step 1 打开终端</div>
+        <p>按住键盘 <code>win + R</code> 键，然后在弹出的界面输入 <code>cmd</code>，接着点击确定。</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/1163ce15ae6c4d6e92a3e77fbb4c0003.png" alt="打开终端">
+            <p>打开终端的操作界面</p>
+        </div>
+    </div>
+    
+    <div class="step">
+        <div class="step-title">step2: 查看cuda版本</div>
+        <p>在弹出的终端界面输入</p>
+        <div class="code-block">
+            nvidia-smi
+        </div>
+        <p>接着按下键盘回车键，会有以下输出。</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/4989044d06354078a8cda0d4a3d76c7c.png" alt="查看CUDA版本">
+            <p>CUDA版本查询结果界面</p>
+        </div>
+        <p>注意上述图片中的 <code>CUDA Version</code> 部分，如上图 <code>12.9</code> 便是cuda版本，记住后续使用。</p>
+    </div>
+    
+    <h2>二、前置环境准备</h2>
+    <div class="step">
+        <p>需要电脑提前安装好Anaconda(python包管理器)，这样可以不毁坏环境。</p>
+        <p>下载迅雷（可选）。因为torch安装包比较大，可以使用加速下载。</p>
+    </div>
+    
+    <h2>三、查找合适的torch版本以及版本对应关系</h2>
+    <p>根据第一部分获得的CUDA版本，需要找到小于等于当前CUDA版本的torch进行安装。如上述我的CUDA版本为12.9，我可以安装所有小于等于12.9的版本。</p>
+    
+    <h3>1. 简要介绍</h3>
+    <p>如下图所示Windows系统下的我全部可以安装</p>
+    <div class="img-container">
+        <img src="https://i-blog.csdnimg.cn/direct/ad756cd473014965b511af28f94206f6.png" alt="Windows系统可用版本">
+        <p>Windows系统下可用的PyTorch版本</p>
+    </div>
+    
+    <h3>2. 根据cuda版本查找版本对应关系</h3>
+    <p>需要查找的版本对应关系的包有：torch，torchvision，torchaudio。</p>
+    <p>进入网站 <a href="https://pytorch.org/get-started/previous-versions/" target="_blank" class="download-link">Installing previous versions of PyTorch</a>。</p>
+    <p>比如，我要安装V2.8.0及cuda 12.8的torch，则对应于图中红框圈起来的数据。</p>
+    <div class="img-container">
+        <img src="https://i-blog.csdnimg.cn/direct/59c8c8175ddb4308a0ff85c722cf821f.png" alt="版本对应关系">
+        <p>PyTorch与CUDA版本对应关系</p>
+    </div>
+    <p>此时版本对应关系显而易见。</p>
+    
+    <h2>四、下载.whl</h2>
+    <p><code>.whl</code> 为Python第三方库离线安装方式。</p>
+    
+    <div class="step">
+        <p>下载 <code>torch.whl</code>，进入网站 <a href="https://download.pytorch.org/whl/torch/" target="_blank" class="download-link">https://download.pytorch.org/whl/torch/</a>，找到torch2.8.0和cuda12.8以及Python版本为3.12的Windows系统下的安装包单击进行下载。</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/da8ebc07a3cd426ea61e0213e54e554e.png" alt="下载torch.whl">
+            <p>注意：win_amd64为Windows系统的对应版本</p>
+        </div>
+    </div>
+    
+    <div class="step">
+        <p>同理找到其他两个包的相对应版本的安装包进行下载。</p>
+        <p>进入 <a href="https://download.pytorch.org/whl/torchvision/" target="_blank" class="download-link">https://download.pytorch.org/whl/torchvision/</a> 下载 <code>torchvision.whl</code></p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/0ac825efe1e04eafa54d6395e5c045df.png" alt="下载torchvision.whl">
+            <p>torchvision下载界面</p>
+        </div>
+    </div>
+    
+    <div class="step">
+        <p>进入 <a href="https://download.pytorch.org/whl/torchaudio/" target="_blank" class="download-link">https://download.pytorch.org/whl/torchaudio/</a> 下载 <code>torchaudio.whl</code></p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/94cd5c234e6e4a69a7e241b621ac62e3.png" alt="下载torchaudio.whl">
+            <p>torchaudio下载界面</p>
+        </div>
+    </div>
+    
+    <h2>五、创建虚拟环境并进行安装</h2>
+    
+    <div class="step">
+        <div class="step-title">step1 创建虚拟环境</div>
+        <p>通过anaconda终端创建名为 <code>deeplearning</code>（虚拟环境名可以自定义）Python为3.12版本（可根据之际替换）的虚拟环境。</p>
+        <div class="code-block">
+            conda create -n deeplearning python=3.12 -y
+        </div>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/055af7d319154e1e851b90038442e0dc.png" alt="创建虚拟环境">
+            <p>创建虚拟环境的命令执行界面</p>
+        </div>
+    </div>
+    
+    <div class="step">
+        <div class="step-title">step2 激活环境</div>
+        <p>等到出现以下结果时代表已经创建完毕</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/0c7999e1608546a59defb9f9e5834b8d.png" alt="环境创建完成">
+            <p>虚拟环境创建成功提示</p>
+        </div>
+        <p>此时激活环境</p>
+        <div class="code-block">
+            conda activate deeplearning
+        </div>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/28567e707566468c92ab5c415478b5ec.png" alt="激活环境">
+            <p>激活虚拟环境的命令执行界面</p>
+        </div>
+        <p>此时环境已经激活</p>
+    </div>
+    
+    <div class="step">
+        <div class="step-title">step3 安装whl</div>
+        <p>打开刚才下载文件的目录可以看到</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/ffed806976654cae9691781870168e34.png" alt="下载文件目录">
+            <p>下载的whl文件所在目录</p>
+        </div>
+        <p>接着在刚才的终端里输入 <code>pip install </code> 然后将上述三个文件按顺序拖动进去（注意每个文件之间要存在空格），然后回车即可安装。</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/2bc832e4de1f46ec9875484d0d2bdddd.png" alt="拖动文件到终端">
+            <p>将文件拖动到终端的操作</p>
+        </div>
+        <p>拖动之后的结果如下图所示，然后回车安装即可（这个过程可能会有点漫长，取决于当前电脑的网速）。</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/3bccb9cd655a4c50921c39396521ac04.png" alt="安装命令">
+            <p>完整的安装命令</p>
+        </div>
+        <p>当出现成功安装的英文时，且未报错，说明安装成功</p>
+        <div class="img-container">
+            <img src="https://i-blog.csdnimg.cn/direct/e652182019b54cbf94953ab31f3dc6ad.png" alt="安装成功">
+            <p>安装成功的提示信息</p>
+        </div>
+    </div>
+    
+    <h2>六、总结</h2>
+    <p>至此，所有安装过程均已完成，希望可以帮助到你，如果对于文章有错误的部分可以关注公众号留言指正批评。</p>
+
+    
+    <footer>
+        <p>本文档由本人CSDN博客文章转换而来 | 最后更新时间：2025年</p>
+    </footer>
+    
+    <!-- 简单的返回顶部按钮 -->
+    <script>
+        // 当页面滚动时显示/隐藏返回顶部按钮
+        window.addEventListener('scroll', function() {
+            let scrollButton = document.getElementById('scrollToTop');
+            if (!scrollButton) {
+                // 创建返回顶部按钮
+                scrollButton = document.createElement('button');
+                scrollButton.id = 'scrollToTop';
+                scrollButton.textContent = '返回顶部';
+                scrollButton.style.cssText = `
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    padding: 10px 15px;
+                    background-color: #3498db;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    display: none;
+                    z-index: 1000;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                `;
+                document.body.appendChild(scrollButton);
+                
+                // 添加点击事件
+                scrollButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // 控制按钮显示/隐藏
+            if (window.scrollY > 300) {
+                scrollButton.style.display = 'block';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
