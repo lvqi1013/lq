@@ -3,453 +3,1056 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>吕麒的个人主页</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>吕麒 - 个人简历</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container header-content">
-            <div class="profile-container">
-                <div class="profile-img">
-                        <img src="img/profile.svg" alt="个人照片" id="profileImage">
-                    </div>
-                <div class="profile-info">
-                    <h1 class="name">吕麒</h1>
-                    <h2 class="title">人工智能专业</h2>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>1595642896@qq.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>138****1234</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>湖南省长沙市</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">吕麒</a>
             </div>
-        </div>
-    </header>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">个人简介</a>
+                <a href="#education" class="nav-link">教育背景</a>
+                <a href="#skills" class="nav-link">专业技能</a>
+                <a href="#projects" class="nav-link">项目经验</a>
+                <a href="#awards" class="nav-link">获奖情况</a>
+                <a href="#contact" class="nav-link">联系方式</a>
+                <a href="./blog/blog_index.html" class="nav-link">个人博客</a>
 
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#about" class="nav-link">个人简介</a></li>
-                <li class="nav-item"><a href="#education" class="nav-link">教育背景</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">专业技能</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">项目经验</a></li>
-                <li class="nav-item"><a href="#awards" class="nav-link">获奖情况</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">联系方式</a></li>
-                <li class="nav-item"><a href="blog/index.html" class="nav-link">技术博客</a></li>
-            </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
-    <main class="main">
-        <section id="about" class="section about">
-            <div class="container">
-                <h2 class="section-title">
-                    <i class="fas fa-user"></i> 个人简介
-                </h2>
-                <div class="section-content">
-                    <p>我是一名人工智能专业的大四学生，对机器学习、深度学习和自然语言处理领域充满热情。在校期间，我保持着优秀的学习成绩，并积极参与各类科研项目和竞赛活动。我希望通过保研继续深造，在人工智能领域进行更深入的研究。</p>
-                    <p>我的研究兴趣主要包括：深度学习、计算机视觉、自然语言处理、强化学习等方向。我具备扎实的数学基础和编程能力，能够独立完成从问题定义到模型实现的全流程工作。</p>
+    <!-- 首页/头部 -->
+    <header id="home" class="header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>吕麒</h1>
+                <h2>人工智能专业学生</h2>
+                <p>专注于机器学习、深度学习与自然语言处理</p>
+                <div class="header-btns">
+                    <a href="#projects" class="btn btn-primary">查看项目</a>
+                    <a href="#contact" class="btn btn-secondary">联系我</a>
                 </div>
             </div>
-        </section>
-
-        <section id="education" class="section education">
-            <div class="container">
-                <h2 class="section-title">
-                    <i class="fas fa-graduation-cap"></i> 教育背景
-                </h2>
-                <div class="section-content">
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h3 class="education-school">湖南师范大学</h3>
-                            <span class="education-date">2023.09 - 至今</span>
-                        </div>
-                        <div class="education-info">
-                            <p class="education-major">人工智能专业</p>
-                            <p class="education-gpa">GPA：/5.0 | 专业排名：4/105</p>
-                            <p class="education-courses">主要课程：高等数学、线性代数、概率论与数理统计、数据结构、算法分析与设计、机器学习、深度学习、计算机视觉、自然语言处理、人工智能导论</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section skills">
-            <div class="container">
-                <h2 class="section-title">
-                    <i class="fas fa-code"></i> 专业技能
-                </h2>
-                <div class="section-content">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">编程语言</h3>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <span class="skill-name">Python</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 95%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">C/C++</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">Java</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 75%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">JavaScript</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 70%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">AI框架</h3>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <span class="skill-name">PyTorch</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 90%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">TensorFlow</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">Scikit-learn</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">OpenCV</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 80%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">专业知识</h3>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <span class="skill-name">机器学习</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 90%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">深度学习</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">自然语言处理</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 80%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">计算机视觉</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">工具与技术</h3>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <span class="skill-name">Git</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">Docker</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 75%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">Linux</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 80%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">MySQL/PostgreSQL</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 75%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section projects">
-            <div class="container">
-                <h2 class="section-title">
-                    <i class="fas fa-project-diagram"></i> 项目经验
-                </h2>
-                <div class="section-content">
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <h3 class="project-title">基于深度学习的图像识别系统</h3>
-                                <span class="project-date">2023.03 - 2023.06</span>
-                            </div>
-                            <div class="project-content">
-                                <p class="project-description">开发了一个基于卷积神经网络的图像识别系统，能够识别1000种不同类别的物体。</p>
-                                <div class="project-details">
-                                    <h4 class="project-details-title">主要工作：</h4>
-                                    <ul class="project-details-list">
-                                        <li>设计并实现了基于ResNet152的图像分类模型</li>
-                                        <li>使用迁移学习方法提高模型性能</li>
-                                        <li>优化模型推理速度，实现实时识别</li>
-                                        <li>准确率达到92.3%，超过行业平均水平</li>
-                                    </ul>
-                                </div>
-                                <div class="project-tech">
-                                    <span class="tech-tag">PyTorch</span>
-                                    <span class="tech-tag">CNN</span>
-                                    <span class="tech-tag">迁移学习</span>
-                                    <span class="tech-tag">OpenCV</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-header">
-                                <h3 class="project-title">智能问答系统的设计与实现</h3>
-                                <span class="project-date">2022.09 - 2023.01</span>
-                            </div>
-                            <div class="project-content">
-                                <p class="project-description">基于自然语言处理技术开发的智能问答系统，能够回答用户关于特定领域的问题。</p>
-                                <div class="project-details">
-                                    <h4 class="project-details-title">主要工作：</h4>
-                                    <ul class="project-details-list">
-                                        <li>构建了基于BERT的问答模型</li>
-                                        <li>设计了知识图谱来增强问答能力</li>
-                                        <li>开发了用户友好的Web界面</li>
-                                        <li>F1分数达到85.6%，响应时间小于0.5秒</li>
-                                    </ul>
-                                </div>
-                                <div class="project-tech">
-                                    <span class="tech-tag">BERT</span>
-                                    <span class="tech-tag">NLP</span>
-                                    <span class="tech-tag">知识图谱</span>
-                                    <span class="tech-tag">Flask</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-header">
-                                <h3 class="project-title">强化学习在游戏AI中的应用</h3>
-                                <span class="project-date">2022.03 - 2022.06</span>
-                            </div>
-                            <div class="project-content">
-                                <p class="project-description">使用深度强化学习技术训练AI玩Atari游戏，实现了自主学习和决策能力。</p>
-                                <div class="project-details">
-                                    <h4 class="project-details-title">主要工作：</h4>
-                                    <ul class="project-details-list">
-                                        <li>实现了DQN、A3C等强化学习算法</li>
-                                        <li>设计了经验回放和优先级采样机制</li>
-                                        <li>优化了奖励函数，提高学习效率</li>
-                                        <li>在多款游戏中达到了人类专家水平</li>
-                                    </ul>
-                                </div>
-                                <div class="project-tech">
-                                    <span class="tech-tag">强化学习</span>
-                                    <span class="tech-tag">DQN</span>
-                                    <span class="tech-tag">OpenAI Gym</span>
-                                    <span class="tech-tag">PyTorch</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="awards" class="section awards">
-            <div class="container">
-                <h2 class="section-title">
-                    <i class="fas fa-trophy"></i> 获奖情况
-                </h2>
-                <div class="section-content">
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <i class="fas fa-award gold"></i>
-                            </div>
-                            <div class="award-info">
-                                <h3 class="award-title">2025中国机器人大赛暨 RoboCup 机器人世界杯中国赛中型组仿真赛</h3>
-                                <p class="award-description">在全国范围内的人工智能竞赛中，凭借创新的图像识别算法获得一等奖</p>
-                                <span class="award-date">2023年10月</span>
-                            </div>
-                        </div>
-
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <i class="fas fa-award silver"></i>
-                            </div>
-                            <div class="award-info">
-                                <h3 class="award-title">ACM-ICPC程序设计竞赛区域赛银奖</h3>
-                                <p class="award-description">在ACM国际大学生程序设计竞赛区域赛中获得银奖</p>
-                                <span class="award-date">2022年11月</span>
-                            </div>
-                        </div>
-
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <i class="fas fa-award bronze"></i>
-                            </div>
-                            <div class="award-info">
-                                <h3 class="award-title">校级优秀学生奖学金一等奖</h3>
-                                <p class="award-description">连续三年获得校级优秀学生奖学金一等奖</p>
-                                <span class="award-date">2020-2023年</span>
-                            </div>
-                        </div>
-
-                        <div class="award-item">
-                            <div class="award-icon">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div class="award-info">
-                                <h3 class="award-title">全国计算机等级考试四级</h3>
-                                <p class="award-description">获得全国计算机等级考试四级证书</p>
-                                <span class="award-date">2022年6月</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title">
-                    <i class="fas fa-address-card"></i> 联系方式
-                </h2>
-                <div class="section-content">
-                    <div class="contact-container">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div class="contact-text">
-                                    <h3>邮箱</h3>
-                                    <p>1595642896@qq.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div class="contact-text">
-                                    <h3>电话</h3>
-                                    <p>138****1234</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="contact-text">
-                                    <h3>地址</h3>
-                                    <p>湖南省长沙市</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                        <i class="fas fa-code"></i>
-                        <div class="contact-text">
-                            <h3>CSDN</h3>
-                            <p>https://blog.csdn.net/m0_58575732</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-question-circle"></i>
-                        <div class="contact-text">
-                            <h3>知乎</h3>
-                            <p>https://www.zhihu.com/people/liu-xian-ba-ba</p>
-                        </div>
-                    </div>
-                            <div class="contact-item">
-                                <i class="fab fa-weixin"></i>
-                                <div class="contact-text">
-                                    <h3>微信公众号</h3>
-                                    <p>AI学习笔记</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-form">
-                            <h3>给我留言</h3>
-                            <form id="contactForm">
-                                <div class="form-group">
-                                    <label for="name">姓名</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">邮箱</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">留言内容</label>
-                                    <textarea id="message" name="message" rows="5" required></textarea>
-                                </div>
-                                <button type="submit" class="btn submit-btn">发送留言</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>&copy; 2024 吕麒 - 人工智能专业学生简历</p>
-                    <p>设计与开发：吕麒 | 更新时间：2024年4月</p>
-                </div>
-                <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
-                    <a href="https://blog.csdn.net/m0_58575732?spm=1000.2115.3001.10640" class="social-link" title="CSDN" target="_blank"><i class="fas fa-code"></i></a>
-                    <a href="https://www.zhihu.com/people/liu-xian-ba-ba" class="social-link" title="知乎" target="_blank"><i class="fas fa-question-circle"></i></a>
+            <div class="header-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user-graduate"></i>
                 </div>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+
+    <!-- 个人简介 -->
+<section id="about" class="section about-section">
+    <div class="container">
+        <h2 class="section-title">
+            <i class="fas fa-user"></i> 个人简介
+        </h2>
+        <div class="about-content">
+            <div class="about-card">
+                <div class="about-text">
+                    <p class="intro-text">我是一名人工智能专业的大四学生，对机器学习、深度学习和自然语言处理领域充满热情。在校期间，我保持着优秀的学习成绩，并积极参与各类科研项目和竞赛活动。我希望通过保研继续深造，在人工智能领域进行更深入的研究。</p>
+                    <p class="research-text">我的研究兴趣主要包括：深度学习、计算机视觉、自然语言处理、强化学习等方向。我具备扎实的数学基础和编程能力，能够独立完成从问题定义到模型实现的全流程工作。</p>
+                </div>
+                <div class="interests-section">
+                    <h3 class="interests-title">研究兴趣</h3>
+                    <div class="interest-tags">
+                        <span class="tag">
+                            <i class="fas fa-brain"></i>
+                            深度学习
+                        </span>
+                        <span class="tag">
+                            <i class="fas fa-eye"></i>
+                            计算机视觉
+                        </span>
+                        <span class="tag">
+                            <i class="fas fa-language"></i>
+                            自然语言处理
+                        </span>
+                        <span class="tag">
+                            <i class="fas fa-robot"></i>
+                            强化学习
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <h3 class="contact-title">联系方式</h3>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">邮箱</span>
+                            <span class="info-value">1595642896@qq.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">电话</span>
+                            <span class="info-value">138****1234</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">地址</span>
+                            <span class="info-value">湖南省长沙市</span>
+                        </div>
+                    </div>
+					<div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">学校</span>
+                            <span class="info-value">湖南师范大学</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	
+	
+   <!-- 教育背景 -->
+<section id="education" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">教育背景</h2>
+        <div class="education-content">
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="university-logo">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="timeline-info">
+                                <h3 class="university-name">湖南师范大学</h3>
+                                <p class="degree-program">人工智能专业 · 本科</p>
+                                <div class="timeline-period">
+                                    <i class="far fa-calendar"></i>
+                                    <span>2023.09 - 至今</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="academic-performance">
+                            <div class="performance-grid">
+                                <div class="performance-card">
+                                    <div class="performance-icon gpa">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="performance-info">
+                                        <div class="performance-value">4.3/5.0</div>
+                                        <div class="performance-label">GPA</div>
+                                    </div>
+                                </div>
+                                <div class="performance-card">
+                                    <div class="performance-icon rank">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="performance-info">
+                                        <div class="performance-value">TOP 4%</div>
+                                        <div class="performance-label">专业排名</div>
+                                    </div>
+                                </div>
+                                <div class="performance-card">
+                                    <div class="performance-icon courses">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="performance-info">
+                                        <div class="performance-value">A+</div>
+                                        <div class="performance-label">核心课程</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="curriculum-section">
+                            <h4 class="section-subtitle">
+                                <i class="fas fa-brain"></i>
+                                核心课程体系
+                            </h4>
+                            <div class="curriculum-grid">
+                                <div class="curriculum-category">
+                                    <div class="category-header math">
+                                        <i class="fas fa-calculator"></i>
+                                        <span>数学基础</span>
+                                    </div>
+                                    <div class="category-courses">
+                                        <span class="course-pill">高等数学</span>
+                                        <span class="course-pill">线性代数</span>
+                                        <span class="course-pill">概率论与数理统计</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="curriculum-category">
+                                    <div class="category-header cs">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>计算机科学</span>
+                                    </div>
+                                    <div class="category-courses">
+                                        <span class="course-pill">数据结构</span>
+                                        <span class="course-pill">算法分析与设计</span>
+                                        <span class="course-pill">计算机系统</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="curriculum-category">
+                                    <div class="category-header ai">
+                                        <i class="fas fa-robot"></i>
+                                        <span>人工智能核心</span>
+                                    </div>
+                                    <div class="category-courses">
+                                        <span class="course-pill">机器学习</span>
+                                        <span class="course-pill">深度学习</span>
+                                        <span class="course-pill">计算机视觉</span>
+                                        <span class="course-pill">自然语言处理</span>
+                                        <span class="course-pill">人工智能导论</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievements-section">
+                            <h4 class="section-subtitle">
+                                <i class="fas fa-award"></i>
+                                学术成就
+                            </h4>
+                            <div class="achievements-grid">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-medal"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <div class="achievement-title">专业前5%</div>
+                                        <div class="achievement-desc">人工智能专业排名前4/105</div>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <div class="achievement-title">卓越成绩</div>
+                                        <div class="achievement-desc">多门核心课程获得A+评级</div>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-flask"></i>
+                                    </div>
+                                    <div class="achievement-content">
+                                        <div class="achievement-title">科研参与</div>
+                                        <div class="achievement-desc">积极参与实验室科研项目</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- 专业技能 -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">专业技能</h2>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>编程语言</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="95"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">C/C++</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="75"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="70"></div>
+                        </div>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AI框架</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">PyTorch</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="90"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">TensorFlow</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Scikit-learn</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">OpenCV</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>专业知识</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">机器学习</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="90"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">深度学习</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">自然语言处理</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">计算机视觉</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>工具与技术</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Git</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="75"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Linux</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MySQL/PostgreSQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percent="75"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经验 -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">项目经验</h2>
+            <div class="projects-content">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>基于深度学习的图像识别系统</h3>
+                        <span class="project-date">2023.03 - 2023.06</span>
+                    </div>
+                    <div class="project-desc">
+                        <p>开发基于卷积神经网络的图像识别系统，能够识别1000种不同类别的物体。</p>
+                        <ul>
+                            <li>设计并实现基于ResNet152的图像分类模型</li>
+                            <li>使用迁移学习方法提高模型性能</li>
+                            <li>优化模型推理速度，实现实时识别</li>
+                            <li>准确率达到92.3%，超过行业平均水平</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">CNN</span>
+                        <span class="tech-tag">迁移学习</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>智能问答系统的设计与实现</h3>
+                        <span class="project-date">2022.09 - 2023.01</span>
+                    </div>
+                    <div class="project-desc">
+                        <p>基于自然语言处理技术开发的智能问答系统，能够回答用户关于特定领域的问题。</p>
+                        <ul>
+                            <li>构建基于BERT的问答模型</li>
+                            <li>设计知识图谱来增强问答能力</li>
+                            <li>开发用户友好的Web界面</li>
+                            <li>F1分数达到85.6%，响应时间小于0.5秒</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">BERT</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">知识图谱</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>强化学习在游戏AI中的应用</h3>
+                        <span class="project-date">2022.03 - 2022.06</span>
+                    </div>
+                    <div class="project-desc">
+                        <p>使用深度强化学习技术训练AI玩Atari游戏，实现自主学习和决策能力。</p>
+                        <ul>
+                            <li>实现DQN、A3C等强化学习算法</li>
+                            <li>设计经验回放和优先级采样机制</li>
+                            <li>优化奖励函数，提高学习效率</li>
+                            <li>在多款游戏中达到人类专家水平</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">强化学习</span>
+                        <span class="tech-tag">DQN</span>
+                        <span class="tech-tag">OpenAI Gym</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 获奖情况 -->
+<section id="awards" class="section">
+    <div class="container">
+        <h2 class="section-title">获奖情况</h2>
+        
+        <!-- 大图展示区 -->
+        <div class="award-featured">
+            <div class="featured-slides">
+                <!-- 奖项1 - 机器人大赛 -->
+                <div class="featured-slide active">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <!-- 真实照片 -->
+                            <img src="images/awards/robot-competition.jpg" alt="中国机器人大赛证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-trophy\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">中国机器人大赛国家二等奖</h3>
+                        <div class="award-meta">
+                            <span class="award-level">国家级奖项</span>
+                            <span class="award-date">2025年10月</span>
+                        </div>
+                        <p class="award-desc">2025中国机器人大赛暨RoboCup机器人世界杯中国赛中型组仿真赛，获得季军（国家二等奖）。在河北石家庄举办的国家级机器人竞赛。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>比赛名称：</strong>中国机器人大赛暨RoboCup机器人世界杯中国赛
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖等级：</strong>国家二等奖（季军）
+                            </div>
+                            <div class="detail-item">
+                                <strong>团队成员：</strong>刘吉哲、吕麒、黄志高、邱渤翔
+                            </div>
+                            <div class="detail-item">
+                                <strong>指导教师：</strong>罗莎
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项2 - 美赛H奖 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <!-- 真实照片 -->
+                            <img src="images/awards/math-modeling.jpg" alt="美赛H奖证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-chart-line\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">美国大学生数学建模竞赛H奖</h3>
+                        <div class="award-meta">
+                            <span class="award-level">国际级奖项</span>
+                            <span class="award-date">2025年</span>
+                        </div>
+                        <p class="award-desc">2025年美国大学生数学建模竞赛（MCM/ICM），获得Honorable Mention奖项。国际级数学建模竞赛。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>比赛名称：</strong>美国大学生数学建模竞赛
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖等级：</strong>Honorable Mention (H奖)
+                            </div>
+                            <div class="detail-item">
+                                <strong>团队成员：</strong>吕麒、廖佳乐、李紫卓
+                            </div>
+                            <div class="detail-item">
+                                <strong>指导教师：</strong>陈明、陈中祥
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项3 - 天梯赛 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <!-- 真实照片 -->
+                            <img src="images/awards/programming-contest.jpg" alt="天梯赛证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-code\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">团体程序设计天梯赛国家三等奖</h3>
+                        <div class="award-meta">
+                            <span class="award-level">国家级奖项</span>
+                            <span class="award-date">2025年5月</span>
+                        </div>
+                        <p class="award-desc">2025年团体程序设计天梯赛全国总决赛，获得团队三等奖。全国性程序设计竞赛。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>比赛名称：</strong>团体程序设计天梯赛全国总决赛
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖等级：</strong>国家三等奖
+                            </div>
+                            <div class="detail-item">
+                                <strong>参赛学校：</strong>湖南师范大学
+                            </div>
+                            <div class="detail-item">
+                                <strong>组别：</strong>华山论剑
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项4 - 励志奖学金 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <!-- 真实照片 -->
+                            <img src="images/awards/scholarship.jpg" alt="国家励志奖学金证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-graduation-cap\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">国家励志奖学金</h3>
+                        <div class="award-meta">
+                            <span class="award-level">国家级奖项</span>
+                            <span class="award-date">2023-2024学年</span>
+                        </div>
+                        <p class="award-desc">2023-2024学年国家励志奖学金，表彰在学业和综合素质方面表现优秀的学生。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>奖项类型：</strong>国家励志奖学金
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖时间：</strong>2023-2024学年
+                            </div>
+                            <div class="detail-item">
+                                <strong>颁发单位：</strong>教育部
+                            </div>
+                            <div class="detail-item">
+                                <strong>证书编号：</strong>2024年第18417号
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项5 - 蓝桥杯 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <!-- 真实照片 -->
+                            <img src="images/awards/lanqiao-cup.jpg" alt="蓝桥杯证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-robot\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">蓝桥杯人工智能团体赛省级奖</h3>
+                        <div class="award-meta">
+                            <span class="award-level">省级奖项</span>
+                            <span class="award-date">2025年</span>
+                        </div>
+                        <p class="award-desc">2025年蓝桥杯全国软件和信息技术专业人才大赛-人工智能团体赛，获得省级奖项。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>比赛名称：</strong>蓝桥杯人工智能团体赛
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖等级：</strong>省级奖项
+                            </div>
+                            <div class="detail-item">
+                                <strong>比赛类型：</strong>人工智能竞赛
+                            </div>
+                            <div class="detail-item">
+                                <strong>举办单位：</strong>工业和信息化部人才交流中心
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项6 - 数模省赛 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <img src="images/awards/math-provincial.jpg" alt="数模省赛证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-calculator\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">湖南省数学建模竞赛省三等奖</h3>
+                        <div class="award-meta">
+                            <span class="award-level">省级奖项</span>
+                            <span class="award-date">2025年</span>
+                        </div>
+                        <p class="award-desc">第三十二届湖南省大学生数学建模竞赛，获得省三等奖。省级数学建模竞赛。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>比赛名称：</strong>湖南省大学生数学建模竞赛
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖等级：</strong>省三等奖
+                            </div>
+                            <div class="detail-item">
+                                <strong>届数：</strong>第三十二届
+                            </div>
+                            <div class="detail-item">
+                                <strong>类型：</strong>数学建模竞赛
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项7 - 一等奖学金 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <img src="images/awards/first-scholarship.jpg" alt="一等奖学金证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-medal\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">校综合一等奖学金及三好学生</h3>
+                        <div class="award-meta">
+                            <span class="award-level">校级奖项</span>
+                            <span class="award-date">2024-2025学年</span>
+                        </div>
+                        <p class="award-desc">2024-2025学年校综合一等奖学金及三好学生称号，校级最高荣誉奖项。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>奖项类型：</strong>校综合一等奖学金
+                            </div>
+                            <div class="detail-item">
+                                <strong>荣誉称号：</strong>三好学生
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖时间：</strong>2024-2025学年
+                            </div>
+                            <div class="detail-item">
+                                <strong>颁发单位：</strong>湖南师范大学
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项8 - 松果杯 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <img src="images/awards/songguo-cup.jpg" alt="松果杯证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-laptop-code\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">松果程序设计竞赛一等奖</h3>
+                        <div class="award-meta">
+                            <span class="award-level">校级奖项</span>
+                            <span class="award-date">2024年10月</span>
+                        </div>
+                        <p class="award-desc">湖南师范大学-百度松果人才培养菁英班第二届'数融合松果杯'程序设计挑战赛，获得二等奖。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>比赛名称：</strong>松果杯程序设计挑战赛
+                            </div>
+                            <div class="detail-item">
+                                <strong>获奖等级：</strong>二等奖
+                            </div>
+                            <div class="detail-item">
+                                <strong>举办单位：</strong>湖南省智能计算与感知现代产业学院
+                            </div>
+                            <div class="detail-item">
+                                <strong>比赛时间：</strong>2024年10月
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项9 - 学术论文 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <img src="images/awards/paper.jpg" alt="学术论文" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-file-alt\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">学术论文发表</h3>
+                        <div class="award-meta">
+                            <span class="award-level">学术成果</span>
+                            <span class="award-date">2024-2025年</span>
+                        </div>
+                        <p class="award-desc">以唯一本科生身份参与发表3篇学术论文，涉及强化学习、智能医疗等领域。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>论文数量：</strong>3篇
+                            </div>
+                            <div class="detail-item">
+                                <strong>作者身份：</strong>唯一本科生
+                            </div>
+                            <div class="detail-item">
+                                <strong>研究领域：</strong>强化学习、智能医疗
+                            </div>
+                            <div class="detail-item">
+                                <strong>状态：</strong>1篇已发表，1篇未见刊，1篇在投
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项10 - 发明专利 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <img src="images/awards/patent.jpg" alt="发明专利证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-certificate\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">发明专利授权</h3>
+                        <div class="award-meta">
+                            <span class="award-level">知识产权</span>
+                            <span class="award-date">2025年7月</span>
+                        </div>
+                        <p class="award-desc">基于AFW-BRS模型的农业生态系统稳定性评估方法，获得国家发明专利授权。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>专利类型：</strong>发明专利
+                            </div>
+                            <div class="detail-item">
+                                <strong>专利名称：</strong>基于AFW-BRS模型的农业生态系统稳定性评估方法
+                            </div>
+                            <div class="detail-item">
+                                <strong>专利号：</strong>ZL 202510495425.2
+                            </div>
+                            <div class="detail-item">
+                                <strong>授权时间：</strong>2025年7月1日
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项11 - 大创项目 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <img src="images/awards/innovation-project.jpg" alt="大创项目" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-lightbulb\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">省级大创项目负责人</h3>
+                        <div class="award-meta">
+                            <span class="award-level">科研项目</span>
+                            <span class="award-date">2025年</span>
+                        </div>
+                        <p class="award-desc">担任2025年度湖南省大学生创新训练计划一般项目负责人，项目基于深度学习的相关研究。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>项目类型：</strong>省级大创项目
+                            </div>
+                            <div class="detail-item">
+                                <strong>担任角色：</strong>项目负责人
+                            </div>
+                            <div class="detail-item">
+                                <strong>项目年度：</strong>2025年度
+                            </div>
+                            <div class="detail-item">
+                                <strong>项目状态：</strong>在研
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖项12 - 松果学员 -->
+                <div class="featured-slide">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <img src="images/awards/baidu-certificate.jpg" alt="百度松果证书" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\'fas fa-user-graduate\'></i>'">
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="award-title">百度松果优秀学员</h3>
+                        <div class="award-meta">
+                            <span class="award-level">培训认证</span>
+                            <span class="award-date">2025年3月</span>
+                        </div>
+                        <p class="award-desc">完成湖南师范大学-百度松果人才培养菁英班全部课程及题库练习，获得优秀学员证书。</p>
+                        <div class="award-details">
+                            <div class="detail-item">
+                                <strong>培训项目：</strong>百度松果人才培养菁英班
+                            </div>
+                            <div class="detail-item">
+                                <strong>获得荣誉：</strong>优秀学员
+                            </div>
+                            <div class="detail-item">
+                                <strong>完成时间：</strong>2025年3月
+                            </div>
+                            <div class="detail-item">
+                                <strong>颁发单位：</strong>百度松果学堂
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 大图轮播控制按钮 -->
+            <button class="featured-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="featured-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- 小图轮播导航 - 保持不变，使用图标 -->
+        <div class="awards-thumbnails">
+            <div class="thumbnails-container">
+                <!-- 缩略图1-12 保持使用Font Awesome图标 -->
+                <div class="award-thumb active" data-index="0">
+                    <div class="thumb-image">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="thumb-title">机器人大赛</div>
+                </div>
+                
+                <div class="award-thumb" data-index="1">
+                    <div class="thumb-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="thumb-title">美赛H奖</div>
+                </div>
+                
+                <div class="award-thumb" data-index="2">
+                    <div class="thumb-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="thumb-title">天梯赛</div>
+                </div>
+                
+                <div class="award-thumb" data-index="3">
+                    <div class="thumb-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="thumb-title">励志奖学金</div>
+                </div>
+                
+                <div class="award-thumb" data-index="4">
+                    <div class="thumb-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="thumb-title">蓝桥杯</div>
+                </div>
+                
+                <div class="award-thumb" data-index="5">
+                    <div class="thumb-image">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="thumb-title">数模省赛</div>
+                </div>
+                
+                <div class="award-thumb" data-index="6">
+                    <div class="thumb-image">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="thumb-title">一等奖学金</div>
+                </div>
+                
+                <div class="award-thumb" data-index="7">
+                    <div class="thumb-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="thumb-title">松果杯</div>
+                </div>
+                
+                <div class="award-thumb" data-index="8">
+                    <div class="thumb-image">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="thumb-title">学术论文</div>
+                </div>
+                
+                <div class="award-thumb" data-index="9">
+                    <div class="thumb-image">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="thumb-title">发明专利</div>
+                </div>
+                
+                <div class="award-thumb" data-index="10">
+                    <div class="thumb-image">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="thumb-title">大创项目</div>
+                </div>
+                
+                <div class="award-thumb" data-index="11">
+                    <div class="thumb-image">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="thumb-title">松果学员</div>
+                </div>
+            </div>
+            
+            <!-- 小图轮播控制 -->
+            <button class="thumb-btn thumb-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="thumb-btn thumb-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+    <!-- 联系方式 -->
+	 <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">联系方式</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>邮箱</h3>
+                            <p>1595642896@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>电话</h3>
+                            <p>19140006098</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>地址</h3>
+                            <p>湖南省长沙市</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>其他联系方式</h3>
+
+                    <div class="social-icons">
+                        <!-- 添加CSDN主页 -->
+                        <a href="https://blog.csdn.net/m0_58575732" 
+                            class="social-icon"
+                            target="_blank" 
+                            rel="noopener noreferrer">                        >
+                            <i class="fas fa-blog"></i>
+                            <span>CSDN</span>
+                        </a>
+
+                        <!-- 添加知乎主页 -->
+                        <a href="https://www.zhihu.com/people/lvqi_1013" 
+                            class="social-icon" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                                <i class="fab fa-zhihu"></i>
+                                <span>知乎</span>
+                            </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-weixin"></i>
+                            <span>微信公众号</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 吕麒 - 人工智能专业学生简历</p>
+            <p>设计与开发：吕麒 | 更新时间：2025年11月</p>
+        </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
